@@ -1,5 +1,5 @@
 
 ]
 java:S2184r"BCast one of the operands of this addition operation to a "double".(‡ÎˆÌùÿÿÿÿ
-]	java:S125,"<This block of commented-out lines of code should be removed.(ŠÂ™žýÿÿÿÿ8è·ÊÉÑ1
-E	java:S106y"+Replace this use of System.out by a logger.(ÉÚ‡ãùÿÿÿÿ
+@	java:S106,"+Replace this use of System.out by a logger.(‹íÉþ
+L	java:S106y"+Replace this use of System.out by a logger.(ÉÚ‡ãùÿÿÿÿ8ùó ÊÑ1
