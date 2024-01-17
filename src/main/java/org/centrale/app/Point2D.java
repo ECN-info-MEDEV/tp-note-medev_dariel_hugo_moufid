@@ -41,7 +41,7 @@ public class Point2D {
      * Displays the coordinates of the point.
      */
     public void display() {
-        System.out.println("[" + this.x + "; " + this.y + "]");
+        //System.out.println("[" + this.x + "; " + this.y + "]");
     }
 
     /**
