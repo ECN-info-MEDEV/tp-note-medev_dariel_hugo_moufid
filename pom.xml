@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.centrale.app</groupId>
-  <artifactId>medev-ds</artifactId>
+  <artifactId>tp-note-medev_dariel_hugo_moufid</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>medev-ds</name>
+  <name>tp-note-medev_dariel_hugo_moufid</name>
   <url>http://www.example.com</url>
   <packaging>jar</packaging>
   <properties>
