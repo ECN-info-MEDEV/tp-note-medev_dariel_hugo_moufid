@@ -19,7 +19,7 @@ public class Point2D {
       */
     public Point2D() {
         this.x = 0;
-        this.y = 0
+        this.y = 0;
     }
 
     
@@ -32,19 +32,14 @@ public class Point2D {
         this.y = y;
     }
     
-    /**
-      * 
-      * Point 2D a partir d'un autre Point 2D
-      */
+    
+    
     public Point2D(Point2D p) {
         this.x = p.x;
         this.y = p.y;
     }
     
-    /**
-      * 
-      * Affichage
-      */
+
     public void affiche() {
         System.out.println("[" + this.x + "; " + this.y + "]");
     }
