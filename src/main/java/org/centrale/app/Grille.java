@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 public class Grille {
     private int taille;
-    private Integer[][] elements;
+    private int[][] elements;
 
     /**
      * Constructeur prenant la taille de la grille en paramètre.
@@ -16,7 +16,7 @@ public class Grille {
      */
     public Grille(int t) {
         this.taille = t;
-        this.elements = new Integer[t][t];
+        this.elements = new int[t][t];
     }
 
     /**
@@ -27,7 +27,7 @@ public class Grille {
     public Grille(Grille g) {
         this.taille = g.taille;
         // Copier les éléments de la grille
-        this.elements = new Integer[g.taille][g.taille];
+        this.elements = new int[g.taille][g.taille];
         for (int i = 0; i < g.taille; i++) {
             for (int j = 0; j < g.taille; j++) {
                 this.elements[i][j] = g.elements[i][j];
@@ -40,7 +40,7 @@ public class Grille {
      */
     public Grille() {
         this.taille = 5;
-        this.elements = new Integer[5][5];
+        this.elements = new int[5][5];
     }
 
     // Autres méthodes et fonctions
@@ -52,7 +52,7 @@ public class Grille {
      */
     public void setTaille(int t) {
         this.taille = t;
-        this.elements = new Integer[t][t];
+        this.elements = new int[t][t];
     }
     
     /**
@@ -71,7 +71,7 @@ public class Grille {
      *
      * @return La taille de la grille
      */
-    public Integer getTaille() {
+    public int getTaille() {
         return this.taille;
     }
     
@@ -80,7 +80,7 @@ public class Grille {
      *
      * @return le matrice avec les elements de la grille.
      */
-    public Integer[][] getElements() {
+    public int[][] getElements() {
         return this.elements;
     }
 
@@ -254,7 +254,7 @@ public class Grille {
 
             for (int row = 0; row < numRows; row++) {
                 for (int col = 0; col < numCols; col++) {
-                    if (this.elements[row][col] != null) {
+                    if (this.elements[row][col] != 0) {
                         int nomeLength = 1;
                         maxNomeLength = Math.max(maxNomeLength, nomeLength);
                     }
