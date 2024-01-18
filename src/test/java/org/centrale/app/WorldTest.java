@@ -44,7 +44,7 @@ public class WorldTest {
 
 
         // Vérifier si le message du tour est correct
-        assertEquals("Le message du tour doit être correct", "C'est le tour du " + joueur1.getNom(), "C'est le tour du " + joueur1.getNom());
+        assertEquals("Le message du tour doit être correct", "C'est le tour du " + joueur1.getNom());
 
 
         // Réinitialiser l'entrée standard
