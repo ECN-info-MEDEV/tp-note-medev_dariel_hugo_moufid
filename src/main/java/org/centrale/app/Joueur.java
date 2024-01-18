@@ -28,7 +28,7 @@ public class Joueur {
     /**
      * Attribut grille de joueur
      */
-    private Grille[][] grille;
+    private Grille grille;
 
 
     
@@ -41,7 +41,7 @@ public class Joueur {
         this.nom = nom;
         this.mail = mail;
         this.navires = new Navire[3];
-        this.grille = new Grille[5][5];
+        this.grille = new Grille();
         
         for (int i = 0; i < navires.length; i++) {
             navires[i] = new Navire(i);
@@ -55,7 +55,7 @@ public class Joueur {
         this.nom = "Joueur";
         this.mail = "";
         this.navires = new Navire[3];
-        this.grille = new Grille[5][5];
+        this.grille = new Grille();
         
         for (int i = 0; i < navires.length; i++) {
             navires[i] = new Navire(i);
