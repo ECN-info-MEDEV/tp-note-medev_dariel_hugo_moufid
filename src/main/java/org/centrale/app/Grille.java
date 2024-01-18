@@ -54,6 +54,17 @@ public class Grille {
         this.taille = t;
         this.elements = new Integer[t][t];
     }
+    
+    /**
+     * Met à jour la taille de la grille.
+     *
+     * @param val Nouveau valeur
+     * @param x Position x du nouveau valeur
+     * @param y Position y du nouveau valeur
+     */
+    public void setElements(int val,int x, int y) {
+        this.elements[x][y] = val;
+    }
 
     /**
      * Obtient la taille de la grille.
@@ -62,6 +73,15 @@ public class Grille {
      */
     public Integer getTaille() {
         return this.taille;
+    }
+    
+    /**
+     * Obtient les elements de la grille.
+     *
+     * @return le matrice avec les elements de la grille.
+     */
+    public Integer[][] getElements() {
+        return this.elements;
     }
 
     /**
@@ -111,7 +131,7 @@ public class Grille {
                 else{
                 for (int i = 0; i < tailleNavire; i++) {
                     if (ligne - i >= 0) {
-                        elements[ligne - i][colonne] = 1; // Vous pouvez utiliser d'autres valeurs si nécessaire
+                        elements[ligne - i][colonne] = tailleNavire; // Vous pouvez utiliser d'autres valeurs si nécessaire
                     } else {
                         System.out.println("Position invalide. Réessayez.");
                         placerNavire(scanner, tailleNavire);
@@ -129,7 +149,7 @@ public class Grille {
                 else{
                 for (int i = 0; i < tailleNavire; i++) {
                     if (ligne + i < taille) {
-                        elements[ligne + i][colonne] = 1; // Vous pouvez utiliser d'autres valeurs si nécessaire
+                        elements[ligne + i][colonne] = tailleNavire; // Vous pouvez utiliser d'autres valeurs si nécessaire
                     } else {
                         System.out.println("Position invalide. Réessayez.");
                         placerNavire(scanner, tailleNavire);
@@ -147,7 +167,7 @@ public class Grille {
                 else{
                 for (int i = 0; i < tailleNavire; i++) {
                     if (colonne - i >= 0) {
-                        elements[ligne][colonne - i] = 1; // Vous pouvez utiliser d'autres valeurs si nécessaire
+                        elements[ligne][colonne - i] = tailleNavire; // Vous pouvez utiliser d'autres valeurs si nécessaire
                     } else {
                         System.out.println("Position invalide. Réessayez.");
                         placerNavire(scanner, tailleNavire);
@@ -165,7 +185,7 @@ public class Grille {
                 else{
                 for (int i = 0; i < tailleNavire; i++) {
                     if (colonne + i < taille) {
-                        elements[ligne][colonne + i] = 1; // Vous pouvez utiliser d'autres valeurs si nécessaire
+                        elements[ligne][colonne + i] = tailleNavire; // Vous pouvez utiliser d'autres valeurs si nécessaire
                     } else {
                         System.out.println("Position invalide. Réessayez.");
                         placerNavire(scanner, tailleNavire);
@@ -181,6 +201,86 @@ public class Grille {
                 return;
         }
     }
+}
+    
+    /**
+     * Methode pour afficher la grille du jueur.
+     */
+    public void affichage() {
+        
+    int numRows = this.elements[0].length;
+    int numCols = this.elements.length;
+
+        int maxNomeLength = 1; 
+
+            for (int row = 0; row < numRows; row++) {
+                for (int col = 0; col < numCols; col++) {
+                    if (this.elements[row][col] != 0) {
+                        int nomeLength = 1;
+                        maxNomeLength = Math.max(maxNomeLength, nomeLength);
+                    }
+                }
+            }
+            int cellSize = maxNomeLength + 2; 
+            for (int row = numRows - 1; row >= 0; row--) {
+                System.out.printf("%-" + maxNomeLength + "d  ", row); 
+                for (int col = 0; col < numCols; col++) {
+                    if (this.elements[row][col] == 9) {
+                        System.out.printf("%-" + cellSize + "s", "X"); 
+                    } else {
+                        System.out.printf("%-" + cellSize + "s", this.elements[row][col]); 
+                    }
+                }
+                System.out.println();
+            }
+            System.out.println();
+            System.out.printf("%-" + cellSize + "s", "");
+            for (int col = 0; col < numCols; col++) {
+                System.out.printf("%-" + cellSize + "s", col);
+            }
+
+        }
+    
+    
+    /**
+     * Methode pour afficher la grille de l'autre joueur.
+     */
+    public void affichageCache() {
+        
+    int numRows = this.elements[0].length;
+    int numCols = this.elements.length;
+
+        int maxNomeLength = 1; 
+
+            for (int row = 0; row < numRows; row++) {
+                for (int col = 0; col < numCols; col++) {
+                    if (this.elements[row][col] != null) {
+                        int nomeLength = 1;
+                        maxNomeLength = Math.max(maxNomeLength, nomeLength);
+                    }
+                }
+            }
+            int cellSize = maxNomeLength + 2; 
+            for (int row = numRows - 1; row >= 0; row--) {
+                System.out.printf("%-" + maxNomeLength + "d  ", row); 
+                for (int col = 0; col < numCols; col++) {
+                    if (this.elements[row][col] == 9) {
+                        System.out.printf("%-" + cellSize + "s", "0");
+                    if (this.elements[row][col] == 8) {
+                        System.out.printf("%-" + cellSize + "s", "X");
+                    } else {
+                        System.out.printf("%-" + cellSize + "s", "?"); 
+                    }
+                }
+                System.out.println();
+            }
+            System.out.println();
+            System.out.printf("%-" + cellSize + "s", "");
+            for (int col = 0; col < numCols; col++) {
+                System.out.printf("%-" + cellSize + "s", col);
+            }
+
+        }
 }
 }
 

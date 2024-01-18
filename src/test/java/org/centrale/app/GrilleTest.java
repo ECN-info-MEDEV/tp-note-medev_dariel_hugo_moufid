@@ -40,6 +40,19 @@ public class GrilleTest {
     }
 
     /**
+     * Test of setElements method, of class Grille.
+     */
+    @Test
+    public void testSetElements() {
+        System.out.println("setElements");
+        int t = 0;
+        Grille instance = new Grille();
+        instance.setElements(t);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
      * Test of getTaille method, of class Grille.
      */
     @Test
@@ -54,6 +67,20 @@ public class GrilleTest {
     }
 
     /**
+     * Test of getElements method, of class Grille.
+     */
+    @Test
+    public void testGetElements() {
+        System.out.println("getElements");
+        Grille instance = new Grille();
+        Integer[][] expResult = null;
+        Integer[][] result = instance.getElements();
+        assertArrayEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
      * Test of placement method, of class Grille.
      */
     @Test
@@ -61,6 +88,30 @@ public class GrilleTest {
         System.out.println("placement");
         Grille instance = new Grille();
         instance.placement();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of affichage method, of class Grille.
+     */
+    @Test
+    public void testAffichage() {
+        System.out.println("affichage");
+        Grille instance = new Grille();
+        instance.affichage();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of affichageCache method, of class Grille.
+     */
+    @Test
+    public void testAffichageCache() {
+        System.out.println("affichageCache");
+        Grille instance = new Grille();
+        instance.affichageCache();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
