@@ -8,11 +8,30 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
-        System.out.println("Teste Connection - Dariel");
-        System.out.println("Teste Connection - Moufid"); 
-        System.out.println("Teste Connection - Hugo");
-        System.out.println("Teste Connection - Teste Branch Dariel");
+        World World1 = new World();
+        
+        int i=0;
+        int m=0;
+ 
+        while(i<12 && m<12){
+        i=0;
+        m=0;
+            
+        World1.tourDeJeu(World1.getJoueur1(), World1.getJoueur2());
+        
+        for(int j=0;j<World1.getJoueur1().getGrille().getTaille();j++){
+            for(int k=0;k<World1.getJoueur1().getGrille().getTaille();k++){
+                if(World1.getJoueur1().getGrille().getElements()[j][k] == 8){
+                    i++;
+                }
+                if(World1.getJoueur2().getGrille().getElements()[j][k] == 8){
+                    m++;
+                }
+            }
+        }
+        
+        }
+        System.out.println("FIN DE JEU");
         
     }
 }

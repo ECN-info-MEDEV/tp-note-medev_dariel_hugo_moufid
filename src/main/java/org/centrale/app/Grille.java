@@ -88,19 +88,23 @@ public class Grille {
      * Place les navires sur la grille en demandant au joueur les positions.
      */
     public void placement() {
+        this.affichage();
         Scanner scanner = new Scanner(System.in);
 
         // Placement du premier navire
         System.out.println("Placement du Porte-avions (Taille 5x1) :");
         placerNavire(scanner, 5);
+        this.affichage();
 
         // Placement du deuxième navire
         System.out.println("Placement du Cuirassé (Taille 4x1) :");
         placerNavire(scanner, 4);
+        this.affichage();
 
         // Placement du troisième navire
         System.out.println("Placement du Destroyer (Taille 3x1) :");
         placerNavire(scanner, 3);
+        this.affichage();
     }
 
     private void placerNavire(Scanner scanner, int tailleNavire) {
@@ -123,7 +127,7 @@ public class Grille {
     else {
         // Placer le navire sur la grille en fonction de la direction
         switch (direction) {
-            case 1: // Vers le haut
+            case 2: // Vers le haut
                 if (ligne - tailleNavire + 1 < 0) {
                 System.out.println("Position invalide. Réessayez.");
                 placerNavire(scanner, tailleNavire);
@@ -141,7 +145,7 @@ public class Grille {
                 }
                 break;
 
-            case 2: // Vers le bas
+            case 1: // Vers le bas
                 if (ligne + tailleNavire - 1 >= taille) {
                 System.out.println("Position invalide. Réessayez.");
                 placerNavire(scanner, tailleNavire);
@@ -225,7 +229,7 @@ public class Grille {
             for (int row = numRows - 1; row >= 0; row--) {
                 System.out.printf("%-" + maxNomeLength + "d  ", row); 
                 for (int col = 0; col < numCols; col++) {
-                    if (this.elements[row][col] == 9) {
+                    if (this.elements[row][col] == 9 || this.elements[row][col] == 8) {
                         System.out.printf("%-" + cellSize + "s", "X"); 
                     } else {
                         System.out.printf("%-" + cellSize + "s", this.elements[row][col]); 
@@ -266,10 +270,13 @@ public class Grille {
                 for (int col = 0; col < numCols; col++) {
                     if (this.elements[row][col] == 9) {
                         System.out.printf("%-" + cellSize + "s", "0");
-                    if (this.elements[row][col] == 8) {
+                    }else{
+                    
+                        if (this.elements[row][col] == 8) {
                         System.out.printf("%-" + cellSize + "s", "X");
-                    } else {
+                        } else{
                         System.out.printf("%-" + cellSize + "s", "?"); 
+                    }
                     }
                 }
                 System.out.println();
@@ -281,6 +288,5 @@ public class Grille {
             }
 
         }
-}
 }
 

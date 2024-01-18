@@ -9,6 +9,26 @@ public class World {
     public World(){
         this.joueur1 = new Joueur("Joueur 1","joueur1@gmail.com");
         this.joueur2 = new Joueur("Joueur 2","joueur2@gmail.com");
+        System.out.println("Merci de placer vos navires "+joueur1.getNom());
+        this.joueur1.getGrille().placement();
+        System.out.println("Merci de placer vos navires "+joueur2.getNom());
+        this.joueur2.getGrille().placement();
+    }
+    
+    public void setJoueur1(Joueur j){
+    this.joueur1 = j;
+    }
+    
+    public void setJoueur2(Joueur j){
+    this.joueur2 = j;
+    }
+    
+    public Joueur getJoueur1(){
+    return this.joueur1;
+    }
+    
+    public Joueur getJoueur2(){
+    return this.joueur2;
     }
 
     /**Methode tourDeJeu qui declanche un tour pour l'un des deux joueurs
@@ -21,7 +41,7 @@ public class World {
         System.out.println("C'est le tour du "+joueur1.getNom());
         System.out.println("Affichage de la grille du "+joueur1.getNom());
         joueur1.getGrille().affichage();
-        System.out.println("Affichage de la grille du "+joueur2.getNom());
+        System.out.println("\n Affichage de la grille du "+joueur2.getNom()+"\n");
         joueur2.getGrille().affichageCache();
         System.out.println("A toi d'attaquer "+joueur1.getNom()+" !");
         int x,y;
