@@ -74,10 +74,10 @@ public class Joueur {
         
         
         
-        int[][] tableau = adversaire.grille.getElements();
+        Integer[][] tableau = adversaire.grille.getElements();
         if(tableau[x][y] == 0){
             System.out.println("Position Vide");
-            tableau[x][y] = 9;
+            adversaire.grille.setElements(9, x, y);
         }
         else if (tableau[x][y] == 8 || tableau[x][y] == 9){
             System.out.println("Position déjà attaquée");
@@ -92,8 +92,7 @@ public class Joueur {
             if(tableau[x][y] == 3){
                 adversaire.navires[0].setPtVie(adversaire.navires[2].getPtVie() - adversaire.navires[2].getDegAtt());
             }
-           tableau[x][y] = 8;
+           adversaire.grille.setElements(8, x, y);
         }
-        adversaire.grille.setElements(tableau);
     }
 }
