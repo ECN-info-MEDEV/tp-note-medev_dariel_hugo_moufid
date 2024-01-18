@@ -107,7 +107,7 @@ public class Joueur {
         
         
         
-        Integer[][] tableau = adversaire.grille.getElements();
+        int[][] tableau = adversaire.getGrille().getElements();
         if(tableau[x][y] == 0){
             System.out.println("Position Vide");
             adversaire.grille.setElements(9, x, y);
