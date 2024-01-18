@@ -61,7 +61,7 @@ public class GrilleTest {
     public void testGetTaille() {
         System.out.println("getTaille");
         Grille instance = new Grille();
-        int expResult = 0;
+        int expResult = 5;
         int result = instance.getTaille();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -75,7 +75,7 @@ public class GrilleTest {
     public void testGetElements() {
         System.out.println("getElements");
         Grille instance = new Grille();
-        int[][] expResult = null;
+        int[][] expResult = new int[5][5];
         int[][] result = instance.getElements();
         assertArrayEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
