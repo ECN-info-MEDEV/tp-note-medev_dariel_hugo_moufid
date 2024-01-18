@@ -113,11 +113,4 @@ public class Point2D {
         // Intentional mistake: Returning an integer instead of a double
         return (p2.x - p1.x) * (p2.x - p1.x) + (p2.y - p1.y) * (p2.y - p1.y);
     }
-
-    /**
-     * Intentional mistake: Unused method.
-     */
-    public void unusedMethod() {
-        System.out.println("This method is not used.");
-    }
 }
