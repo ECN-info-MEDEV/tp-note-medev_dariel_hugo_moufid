@@ -11,3 +11,5 @@ Z
 *src/main/java/org/centrale/app/Joueur.java,9\9\99cd6b29a0f643c489b293050d9b865035497f28
 Z
 *src/main/java/org/centrale/app/Grille.java,c\b\cb3e08acc2efec2dc0eea6275b2d618dd9febd88
+]
+-src/test/java/org/centrale/app/WorldTest.java,c\7\c7ff22560a1fa4d830c3aa714d41e653426c6004
