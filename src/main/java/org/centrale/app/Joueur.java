@@ -63,7 +63,13 @@ public class Joueur {
     }
     
     
-    
+   
+    /**
+     * Méthode de l'attaque la grille de l'adversaire
+     * @param adversaire
+     * @param x
+     * @param y 
+     */
     public void attaque(Joueur adversaire, int x, int y){
         
         
@@ -73,7 +79,7 @@ public class Joueur {
             System.out.println("Position Vide");
             tableau[x][y] = 9;
         }
-        else if (tableau[x][y] == 9){
+        else if (tableau[x][y] == 8 || tableau[x][y] == 9){
             System.out.println("Position déjà attaquée");
         }
         else {
@@ -90,6 +96,4 @@ public class Joueur {
         }
         adversaire.grille.setElements(tableau);
     }
-    
-    
 }
