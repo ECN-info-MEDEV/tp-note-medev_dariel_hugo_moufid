@@ -1,0 +1,65 @@
+
+v
+java:S3012#"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(¥¿Ş8÷éÍáÑ1
+F	java:S106`"+Replace this use of System.out by a logger.(ø±à68ıéÍáÑ1
+G	java:S106d"+Replace this use of System.out by a logger.(¸ŒŞ8ıéÍáÑ1
+G	java:S106h"+Replace this use of System.out by a logger.(œä€8şéÍáÑ1
+8
+java:S3626w"Remove this redundant jump.(ããÌÚ8é×áÑ1
+G	java:S106u"+Replace this use of System.out by a logger.(ĞËçÈ8¢êÍáÑ1
+G	java:S106}"+Replace this use of System.out by a logger.(ĞËçÈ8¤êÍáÑ1
+9
+java:S3626ˆ"Remove this redundant jump.(ããÌÚ8Ÿé×áÑ1
+H	java:S106†"+Replace this use of System.out by a logger.(ĞËçÈ8¥êÍáÑ1
+H	java:S106"+Replace this use of System.out by a logger.(ĞËçÈ8½êÍáÑ1
+9
+java:S3626™"Remove this redundant jump.(ããÌÚ8£é×áÑ1
+H	java:S106—"+Replace this use of System.out by a logger.(ĞËçÈ8½êÍáÑ1
+H	java:S106Ÿ"+Replace this use of System.out by a logger.(ĞËçÈ8¾êÍáÑ1
+9
+java:S3626ª"Remove this redundant jump.(ããÌÚ8¦é×áÑ1
+H	java:S106¨"+Replace this use of System.out by a logger.(ĞËçÈ8¾êÍáÑ1
+H	java:S106°"+Replace this use of System.out by a logger.(ĞËçÈ8ÂêÍáÑ1
+H	java:S106¹"+Replace this use of System.out by a logger.(ÀƒÊ8ÃêÍáÑ1
+H	java:S106º"+Replace this use of System.out by a logger.(Èï¾È8ÄêÍáÑ1
+M	java:S106½"+Replace this use of System.out by a logger.(™Ùÿÿÿÿÿ8ÆêÍáÑ1
+M	java:S106À"+Replace this use of System.out by a logger.(ÜÙ¶€şÿÿÿÿ8ÆêÍáÑ1
+H	java:S106Å"+Replace this use of System.out by a logger.(ĞËçÈ8ÇêÍáÑ1
+H	java:S106Ü"+Replace this use of System.out by a logger.(Şù §8ÇêÍáÑ1
+_
+java:S3457÷"AFormat specifiers should be used instead of string concatenation.(ºøèü8 êÍáÑ1
+H	java:S106÷"+Replace this use of System.out by a logger.(ºøèü8ÈêÍáÑ1
+d
+java:S3457ú"AFormat specifiers should be used instead of string concatenation.(ı˜­±ıÿÿÿÿ8¤êÍáÑ1
+M	java:S106ú"+Replace this use of System.out by a logger.(ı˜­±ıÿÿÿÿ8³é×áÑ1
+d
+java:S3457ü"AFormat specifiers should be used instead of string concatenation.(Îğ°Âùÿÿÿÿ8¥êÍáÑ1
+M	java:S106ü"+Replace this use of System.out by a logger.(Îğ°Âùÿÿÿÿ8´é×áÑ1
+M	java:S106ÿ"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8´é×áÑ1
+M	java:S106"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8´é×áÑ1
+_
+java:S3457‚"AFormat specifiers should be used instead of string concatenation.(ûÒîû8¾êÍáÑ1
+H	java:S106‚"+Replace this use of System.out by a logger.(ûÒîû8µé×áÑ1
+d
+java:S3457„"AFormat specifiers should be used instead of string concatenation.(ÓµÈŒüÿÿÿÿ8¾êÍáÑ1
+M	java:S106„"+Replace this use of System.out by a logger.(ÓµÈŒüÿÿÿÿ8¶é×áÑ1
+_
+java:S3457 "AFormat specifiers should be used instead of string concatenation.(ºøèü8ÂêÍáÑ1
+H	java:S106 "+Replace this use of System.out by a logger.(ºøèü8¹é×áÑ1
+d
+java:S3457£"AFormat specifiers should be used instead of string concatenation.(ÌÈ²€üÿÿÿÿ8ÃêÍáÑ1
+M	java:S106£"+Replace this use of System.out by a logger.(ÌÈ²€üÿÿÿÿ8ºé×áÑ1
+d
+java:S3457¥"AFormat specifiers should be used instead of string concatenation.(ı˜­±ıÿÿÿÿ8ÄêÍáÑ1
+M	java:S106¥"+Replace this use of System.out by a logger.(ı˜­±ıÿÿÿÿ8»é×áÑ1
+^
+java:S3457§"AFormat specifiers should be used instead of string concatenation.(¶À¹y8ÆêÍáÑ1
+G	java:S106§"+Replace this use of System.out by a logger.(¶À¹y8»é×áÑ1
+M	java:S106ª"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8¼é×áÑ1
+M	java:S106¬"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8¼é×áÑ1
+_
+java:S3457­"AFormat specifiers should be used instead of string concatenation.(ûÒîû8ÇêÍáÑ1
+H	java:S106­"+Replace this use of System.out by a logger.(ûÒîû8½é×áÑ1
+d
+java:S3457¯"AFormat specifiers should be used instead of string concatenation.(ÓµÈŒüÿÿÿÿ8ÈêÍáÑ1
+M	java:S106¯"+Replace this use of System.out by a logger.(ÓµÈŒüÿÿÿÿ8¾é×áÑ1
