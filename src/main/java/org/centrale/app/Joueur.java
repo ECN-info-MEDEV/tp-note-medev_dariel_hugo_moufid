@@ -65,24 +65,30 @@ public class Joueur {
     
     
     public void attaque(Joueur adversaire, int x, int y){
-        if(adversaire.grille[x][y] == null){
+        
+        
+        
+        int[][] tableau = adversaire.grille.getElements();
+        if(tableau[x][y] == 0){
             System.out.println("Position Vide");
+            tableau[x][y] = 9;
         }
-        else{
-            if(adversaire.grille[x][y] == adversaire.navires[0].typeNavire()){
+        else if (tableau[x][y] == 9){
+            System.out.println("Position déjà attaquée");
+        }
+        else {
+            if(tableau[x][y] == 5){
                 adversaire.navires[0].setPtVie(adversaire.navires[0].getPtVie() - adversaire.navires[0].getDegAtt());
-                System.out.println("Vous avez attaqué le Porte Avion");
             }
-            if(adversaire.grille[x][y] == adversaire.navires[1].typeNavire()){
+            if(tableau[x][y] == 4){
                 adversaire.navires[0].setPtVie(adversaire.navires[1].getPtVie() - adversaire.navires[1].getDegAtt());
-                System.out.println("Vous avez attaqué le Cuirasse");
             }
-            if(adversaire.grille[x][y] == adversaire.navires[2].typeNavire()){
+            if(tableau[x][y] == 3){
                 adversaire.navires[0].setPtVie(adversaire.navires[2].getPtVie() - adversaire.navires[2].getDegAtt());
-                System.out.println("Vous avez attaqué le Destroyer");
             }
-            
+           tableau[x][y] = 8;
         }
+        adversaire.grille.setElements(tableau);
     }
     
     
