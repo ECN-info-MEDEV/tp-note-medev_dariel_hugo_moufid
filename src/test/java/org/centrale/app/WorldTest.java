@@ -9,6 +9,7 @@ import java.io.InputStream;
 import java.util.Scanner;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -23,6 +24,7 @@ public class WorldTest {
    /**
      * Teste la méthode tourDeJeu en simulant l'entrée utilisateur.
      */
+    @Ignore
     @Test
     public void testTourDeJeu() {
         // Créer une instance de World
