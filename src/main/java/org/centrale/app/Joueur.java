@@ -9,7 +9,7 @@ package org.centrale.app;
  * @author darielbezerra
  */
 public class Joueur {
-    
+
     /**
      * Attribut nom de joueur
      */
@@ -30,7 +30,40 @@ public class Joueur {
      */
     private Grille grille;
 
+    /**getters des attributs*/
 
+    public String getNom() {
+        return nom;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public Navire[] getNavires() {
+        return navires;
+    }
+
+    public Grille getGrille() {
+        return grille;
+    }
+
+    /**setters des attributs*/
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    public void setNavires(Navire[] navires) {
+        this.navires = navires;
+    }
+
+    public void setGrille(Grille grille) {
+        this.grille = grille;
+    }
     
     /**
      * Constructeur avec paramètres

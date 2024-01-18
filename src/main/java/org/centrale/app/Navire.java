@@ -3,9 +3,9 @@ package org.centrale.app;
 public class Navire {
 
     /** points de vie de la creature*/
-    private final int ptVie=100;
+    private int ptVie;
     /**degre d'attack commun à tous les navires*/
-    private final int degAtt=50;
+    private int degAtt;
     /**type du navire*/
     private TypeNavire typeNavire;
     /** largeur du navire selon l'axe des x*/
@@ -18,18 +18,18 @@ public class Navire {
         if(numero==0) {
             this.typeNavire=TypeNavire.PORTE_AVION_1;
             this.largeur=5;
-            this.longueur=1;
         }
         else if(numero==1) {
             this.typeNavire=TypeNavire.CUIRASSE_2;
             this.largeur=4;
-            this.longueur=1;
         }
         else {
             this.typeNavire=TypeNavire.DESTROYER_3;
             this.largeur=3;
-            this.longueur=1;
         }
+        this.longueur=1;
+        this.ptVie=100;
+        this.degAtt=50;
     }
 
     /**getters des differents attributs*/
@@ -64,5 +64,12 @@ public class Navire {
 
     public void setLongueur(int longueur) {
         this.longueur = longueur;
+    }
+    public void setPtVie(int ptVie) {
+        this.ptVie = ptVie;
+    }
+
+    public void setDegAtt(int degAtt) {
+        this.degAtt = degAtt;
     }
 }

@@ -1,15 +1,15 @@
 
 A
-java:S1659"Declare "y" on a separate line.(¡Ê²‘şÿÿÿÿ8Øñ»ßÑ1
-L	java:S106"+Replace this use of System.out by a logger.(³ëüôÿÿÿÿÿ8İñ»ßÑ1
-G	java:S106"+Replace this use of System.out by a logger.(ÜØ°Ì8Şñ»ßÑ1
-L	java:S106"+Replace this use of System.out by a logger.(Í“Â üÿÿÿÿ8Şñ»ßÑ1
-L	java:S106"+Replace this use of System.out by a logger.(æº®Úüÿÿÿÿ8ßñ»ßÑ1
-G	java:S106"+Replace this use of System.out by a logger.(ÿ”¥º8ßñ»ßÑ1
-L	java:S106"+Replace this use of System.out by a logger.(Ûü€«üÿÿÿÿ8àñ»ßÑ1
-G	java:S106"+Replace this use of System.out by a logger.(Ğñè8àñ»ßÑ1
-G	java:S106""+Replace this use of System.out by a logger.(²áäµ8áñ»ßÑ1
+java:S1659"Declare "y" on a separate line.(¡Ê²‘şÿÿÿÿ8Ë•œàÑ1
+L	java:S106"+Replace this use of System.out by a logger.(³ëüôÿÿÿÿÿ8Ñ•œàÑ1
+G	java:S106"+Replace this use of System.out by a logger.(ÜØ°Ì8Ñ•œàÑ1
+L	java:S106"+Replace this use of System.out by a logger.(Í“Â üÿÿÿÿ8Ò•œàÑ1
+L	java:S106"+Replace this use of System.out by a logger.(æº®Úüÿÿÿÿ8Ó•œàÑ1
+G	java:S106"+Replace this use of System.out by a logger.(ÿ”¥º8Ô•œàÑ1
+L	java:S106"+Replace this use of System.out by a logger.(Ûü€«üÿÿÿÿ8Ô•œàÑ1
+G	java:S106"+Replace this use of System.out by a logger.(Ğñè8Ô•œàÑ1
+G	java:S106""+Replace this use of System.out by a logger.(²áäµ8Ö•œàÑ1
 H
-java:S1068"+Remove this unused "joueur1" private field.(„ü™à8âñ»ßÑ1
+java:S1068"+Remove this unused "joueur1" private field.(„ü™à8Ú•œàÑ1
 H
-java:S1068"+Remove this unused "joueur2" private field.(£Î¤8ãñ»ßÑ1
+java:S1068"+Remove this unused "joueur2" private field.(£Î¤8Ü•œàÑ1

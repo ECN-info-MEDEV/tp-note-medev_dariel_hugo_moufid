@@ -20,9 +20,9 @@ public class World {
         Scanner input = new Scanner(System.in);
         System.out.println("C'est le tour du "+joueur1.getNom());
         System.out.println("Affichage de la grille du "+joueur1.getNom());
-        joueur1.grille.affichage();
+        joueur1.getGrille().affichage();
         System.out.println("Affichage de la grille du "+joueur2.getNom());
-        joueur2.grille.affichageCache();
+        joueur2.getGrille().affichageCache();
         System.out.println("A toi d'attaquer "+joueur1.getNom()+" !");
         int x,y;
         do{
