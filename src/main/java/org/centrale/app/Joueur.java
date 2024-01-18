@@ -117,15 +117,15 @@ public class Joueur {
         }
         else {
             if(tableau[x][y] == 5){
-                adversaire.navires[0].setPtVie(adversaire.navires[0].getPtVie() - adversaire.navires[0].getDegAtt());
+                adversaire.getNavires()[0].setPtVie(adversaire.getNavires()[0].getPtVie() - adversaire.getNavires()[0].getDegAtt());
             }
             if(tableau[x][y] == 4){
-                adversaire.navires[0].setPtVie(adversaire.navires[1].getPtVie() - adversaire.navires[1].getDegAtt());
+                adversaire.getNavires()[0].setPtVie(adversaire.getNavires()[1].getPtVie() - adversaire.getNavires()[1].getDegAtt());
             }
             if(tableau[x][y] == 3){
-                adversaire.navires[0].setPtVie(adversaire.navires[2].getPtVie() - adversaire.navires[2].getDegAtt());
+                adversaire.getNavires()[0].setPtVie(adversaire.getNavires()[2].getPtVie() - adversaire.getNavires()[2].getDegAtt());
             }
-           adversaire.grille.setElements(8, x, y);
+           adversaire.getGrille().setElements(8, x, y);
         }
     }
 }
