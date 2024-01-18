@@ -8,6 +8,8 @@ import java.util.Scanner;
 public class Grille {
     private int taille;
     private int[][] elements;
+    /**attribut cree pour corriger une anomalie Sonar*/
+    private static final String INVALIDE ="Position invalide. Réessayez.";
 
     /**
      * Constructeur prenant la taille de la grille en paramètre.
@@ -103,6 +105,81 @@ public class Grille {
         placerNavire(scanner, 3);
     }
 
+    /** Les methodes method1/2/3/4/5 ont ete cree afin de gerer les anomalies Sonar et essayer de passer
+     * en PASSED sur SONARCLOUD
+     * @param ligne
+     * @param tailleNavire
+     * @param scanner
+     * @param colonne
+     */
+    public void method1(int ligne,int tailleNavire,Scanner scanner, int colonne){
+        if (ligne - tailleNavire + 1 < 0) {
+            System.out.println(INVALIDE);
+            placerNavire(scanner, tailleNavire);
+            return;}
+        else{
+            for (int i = 0; i < tailleNavire; i++) {
+                if (ligne - i >= 0) {
+                    elements[ligne - i][colonne] = tailleNavire; // Vous pouvez utiliser d'autres valeurs si nécessaire
+                } else {
+                    System.out.println(INVALIDE);
+                    placerNavire(scanner, tailleNavire);
+                    return;
+                }
+            }
+        }
+    }
+    public void method2(int ligne,int tailleNavire,Scanner scanner, int colonne){
+        if (ligne + tailleNavire - 1 >= taille) {
+            System.out.println(INVALIDE);
+            placerNavire(scanner, tailleNavire);
+            return;}
+        else{
+            for (int i = 0; i < tailleNavire; i++) {
+                if (ligne + i < taille) {
+                    elements[ligne + i][colonne] = tailleNavire; // Vous pouvez utiliser d'autres valeurs si nécessaire
+                } else {
+                    System.out.println(INVALIDE);
+                    placerNavire(scanner, tailleNavire);
+                    return;
+                }
+            }
+        }
+    }
+    public void method3(int ligne,int tailleNavire,Scanner scanner, int colonne){
+        if (colonne - tailleNavire + 1 < 0) {
+            System.out.println(INVALIDE);
+            placerNavire(scanner, tailleNavire);
+            return;}
+        else{
+            for (int i = 0; i < tailleNavire; i++) {
+                if (colonne - i >= 0) {
+                    elements[ligne][colonne - i] = tailleNavire; // Vous pouvez utiliser d'autres valeurs si nécessaire
+                } else {
+                    System.out.println(INVALIDE);
+                    placerNavire(scanner, tailleNavire);
+                    return;
+                }
+            }
+        }
+    }
+    public void method4(int ligne,int tailleNavire,Scanner scanner, int colonne){
+        if (colonne + tailleNavire - 1 >= taille) {
+            System.out.println(INVALIDE);
+            placerNavire(scanner, tailleNavire);
+            return;}
+        else{
+            for (int i = 0; i < tailleNavire; i++) {
+                if (colonne + i < taille) {
+                    elements[ligne][colonne + i] = tailleNavire; // Vous pouvez utiliser d'autres valeurs si nécessaire
+                } else {
+                    System.out.println(INVALIDE);
+                    placerNavire(scanner, tailleNavire);
+                    return;
+                }
+            }
+        }
+    }
     private void placerNavire(Scanner scanner, int tailleNavire) {
     // Demander la position au joueur
     System.out.print("Pour débuter:\n");
@@ -117,82 +194,26 @@ public class Grille {
 
     // Vérifier si la position est valide
     if (ligne < 0 || ligne >= taille || colonne < 0 || colonne >= taille) {
-        System.out.println("Position invalide. Réessayez.");
+        System.out.println(INVALIDE);
         placerNavire(scanner, tailleNavire);
     } 
     else {
         // Placer le navire sur la grille en fonction de la direction
         switch (direction) {
             case 1: // Vers le haut
-                if (ligne - tailleNavire + 1 < 0) {
-                System.out.println("Position invalide. Réessayez.");
-                placerNavire(scanner, tailleNavire);
-                return;}
-                else{
-                for (int i = 0; i < tailleNavire; i++) {
-                    if (ligne - i >= 0) {
-                        elements[ligne - i][colonne] = tailleNavire; // Vous pouvez utiliser d'autres valeurs si nécessaire
-                    } else {
-                        System.out.println("Position invalide. Réessayez.");
-                        placerNavire(scanner, tailleNavire);
-                        return;
-                    }
-                }
-                }
+                method1(ligne,tailleNavire,scanner,colonne);
                 break;
 
             case 2: // Vers le bas
-                if (ligne + tailleNavire - 1 >= taille) {
-                System.out.println("Position invalide. Réessayez.");
-                placerNavire(scanner, tailleNavire);
-                return;}
-                else{
-                for (int i = 0; i < tailleNavire; i++) {
-                    if (ligne + i < taille) {
-                        elements[ligne + i][colonne] = tailleNavire; // Vous pouvez utiliser d'autres valeurs si nécessaire
-                    } else {
-                        System.out.println("Position invalide. Réessayez.");
-                        placerNavire(scanner, tailleNavire);
-                        return;
-                    }
-                }
-                }
+                method2(ligne,tailleNavire,scanner,colonne);
                 break;
 
             case 3: // Vers la gauche
-                if (colonne - tailleNavire + 1 < 0) {
-                System.out.println("Position invalide. Réessayez.");
-                placerNavire(scanner, tailleNavire);
-                return;}
-                else{
-                for (int i = 0; i < tailleNavire; i++) {
-                    if (colonne - i >= 0) {
-                        elements[ligne][colonne - i] = tailleNavire; // Vous pouvez utiliser d'autres valeurs si nécessaire
-                    } else {
-                        System.out.println("Position invalide. Réessayez.");
-                        placerNavire(scanner, tailleNavire);
-                        return;
-                    }
-                }
-                }
+                method3(ligne,tailleNavire,scanner,colonne);
                 break;
 
             case 4: // Vers la droite
-                if (colonne + tailleNavire - 1 >= taille) {
-                System.out.println("Position invalide. Réessayez.");
-                placerNavire(scanner, tailleNavire);
-                return;}
-                else{
-                for (int i = 0; i < tailleNavire; i++) {
-                    if (colonne + i < taille) {
-                        elements[ligne][colonne + i] = tailleNavire; // Vous pouvez utiliser d'autres valeurs si nécessaire
-                    } else {
-                        System.out.println("Position invalide. Réessayez.");
-                        placerNavire(scanner, tailleNavire);
-                        return;
-                    }
-                }
-                }
+                method4(ligne,tailleNavire,scanner,colonne);
                 break;
 
             default:
@@ -241,7 +262,14 @@ public class Grille {
 
         }
     
-    
+    public void method5(int numCols,int row, int maxNomeLength){
+        for (int col = 0; col < numCols; col++) {
+            if (this.elements[row][col] != 0) {
+                int nomeLength = 1;
+                maxNomeLength = Math.max(maxNomeLength, nomeLength);
+            }
+        }
+    }
     /**
      * Methode pour afficher la grille de l'autre joueur.
      */
@@ -253,12 +281,7 @@ public class Grille {
         int maxNomeLength = 1; 
 
             for (int row = 0; row < numRows; row++) {
-                for (int col = 0; col < numCols; col++) {
-                    if (this.elements[row][col] != 0) {
-                        int nomeLength = 1;
-                        maxNomeLength = Math.max(maxNomeLength, nomeLength);
-                    }
-                }
+                method5(numCols,row,maxNomeLength);
             }
             int cellSize = maxNomeLength + 2; 
             for (int row = numRows - 1; row >= 0; row--) {
